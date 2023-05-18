@@ -1,10 +1,10 @@
   // Array de productos
-const productos = [
-  { nombre: 'Hierro', precio: 10 },
-  { nombre: 'Cemento', precio: 15 },
-  { nombre: 'Pintura', precio: 20 },
-  { nombre: 'Madera', precio: 25 }
-];
+// const productos = [
+//   { nombre: 'Hierro', precio: 10 },
+//   { nombre: 'Cemento', precio: 15 },
+//   { nombre: 'Pintura', precio: 20 },
+//   { nombre: 'Madera', precio: 25 }
+// ];
 
 // Variable para almacenar los productos del carrito
 let carrito = [];
@@ -105,3 +105,22 @@ function vaciarCarrito() {
 
 const comprarBtn = document.getElementById('comprar-btn');
 comprarBtn.addEventListener('click', comprar);
+
+function mostrarProductos() {
+  const productosLista = document.getElementById('productos-lista');
+
+  productosLista.innerHTML = '';
+
+  fetch('./DATA/data.json')
+    .then(response => response.json())
+    .then(data => {
+      for (const producto of data) {
+        const li = document.createElement('li');
+        li.textContent = `${producto.nombre} - $${producto.precio}`;
+        li.addEventListener('click', () => agregarAlCarrito(producto));
+        productosLista.appendChild(li);
+      }
+    })
+    .catch(error => console.log('Error:', error));
+}
+
