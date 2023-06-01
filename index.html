@@ -8,30 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    
-  <h1>Tienda de La Alianza S.A</h1>
-  <h2>Lista de productos</h2>
-  <ul id="productos-lista"></ul>
-  
-  <h2>Carrito de compras</h2>
-  <ul id="carrito-lista"></ul>
-  <p id="total"></p>
+  <h1>¡Bienvenido a la Tienda de La Alianza S.A!</h1>
 
-  <div>
-    <button id="limpiar-carrito">Limpiar carrito</button>
-    <button id="comprar-btn">Comprar</button>
+  <div id="catalogo">
+    <!-- Aquí se mostrará el catálogo de productos -->
   </div>
-  
 
+  <div id="carrito">
+    <h2>Carrito de compras</h2>
+    <ul id="carrito-lista">
+      <!-- Aquí se mostrarán los productos agregados al carrito -->
+    </ul>
+    <p id="carrito-total">Total: $0</p>
+    <button id="carrito-comprar" disabled="mostrar">Comprar</button>
+    <button id="carrito-vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+  </div>
+
+  <div id="ticket-contenedor"></div>
 
 
   <script src="JS/script.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
-
-  
-
 
 </body>
 </html>

@@ -1,33 +1,97 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: beige;
-  }
-  
-  h1 {padding-bottom: 3rem;}
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
 
-  h1, h2 {
-    text-align: center;
-  }
-  
-  #productos-container, #carrito-container {
-    width: 50%;
-    margin: 0 auto;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  #total {
-    text-align: right;
-  }
+h1, h2 {
+  text-align: center;
+}
 
-  div{display: flex;
+#catalogo {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;}
-  
+}
+
+.producto {
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#carrito {
+  margin-top: 50px;
+  border-top: 2px solid #ccc;
+  padding-top: 20px;
+}
+
+#carrito-total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#carrito-comprar {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#carrito-comprar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#carrito-vaciar {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+#carrito-vaciar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.ticket {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.ticket h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.ticket ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.ticket li {
+  margin-bottom: 5px;
+}
+
+.ticket p {
+  margin: 10px 0;
+}
+
+.ticket button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.ticket button:hover {
+  background-color: #45a049;
+}
